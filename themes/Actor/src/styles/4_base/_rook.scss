@@ -164,7 +164,7 @@ hr.line-separator {
     width: 22px;
     height: 2px;
     border-radius: 1px;
-    background-color: $primary-color;
+    background-color: white;
   }
 }
 
@@ -401,6 +401,11 @@ hr.line-separator {
 /*--------------------------------------
   3) BOOTSTRAP OVERRIDE
 ---------------------------------------*/
+
+.no-gutter > [class*='col-'] {
+  padding-right:0;
+  padding-left:0;
+}
 
 .navbar-brand {
   padding: 0px 15px;

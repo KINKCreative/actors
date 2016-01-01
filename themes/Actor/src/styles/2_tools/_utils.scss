@@ -39,6 +39,11 @@ $real: $limit / $interval;
     .p-l-#{($i * $interval) + $start} {
       padding-left: #{($i * $interval) + $start}px !important;
     }
+
+    .m-t--#{($i * $interval) + $start} {
+      margin-top: -#{($i * $interval) + $start}px !important;
+    }
+
   }
 }
 
