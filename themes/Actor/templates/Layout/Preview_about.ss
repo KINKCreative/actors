@@ -2,7 +2,7 @@
   <div class="container">
       <div class="row">
           <div class="col-md-6">
-              <img src="$Image.CroppedImage(900,1100).URL" class="img-responsive" />
+              <img src="$Images.First.CroppedImage(900,1100).URL" class="img-responsive" />
           </div>
           <div class="col-md-6">
               <div class="about-content">
@@ -40,11 +40,11 @@
                   </div>
 
                   <!-- Description -->
-                  <p>$Content</p>
+                  <p>$Content.Summary(120)</p>
                   <!-- Button -->
                   <div data-sr="enter bottom over 1.3s and move 15px">
-                      <a class="btn btn-black" href="#x" role="button">See Features</a>
-                      <a class="btn" href="#x" role="button">Read more</a>
+                      <a class="btn btn-black" href="$Link" role="button">Read more</a>
+                      <%-- <a class="btn" href="#x" role="button">Read more</a> --%>
                   </div>
 
               </div>

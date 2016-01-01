@@ -1,6 +1,5 @@
 <% with Item %>
 
-
 <!-- Project Single Header -->
 <div class="jumbotron project-single-header" style="background-image: url($Image.CroppedImage(1422,800).URL);">
     <div class="container">

@@ -2261,7 +2261,8 @@ a.instagram-img {
   margin-top: 30px;
 }
 
-.project-single-header {
+.project-single-header,
+.page-header {
   position: relative;
   margin-bottom: 0;
   height: 400px;
@@ -2270,6 +2271,14 @@ a.instagram-img {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  background: rgba(51,51,51,1);
+  background: -moz-linear-gradient(top, rgba(51,51,51,1) 0%, rgba(19,19,19,1) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(51,51,51,1)), color-stop(100%, rgba(19,19,19,1)));
+  background: -webkit-linear-gradient(top, rgba(51,51,51,1) 0%, rgba(19,19,19,1) 100%);
+  background: -o-linear-gradient(top, rgba(51,51,51,1) 0%, rgba(19,19,19,1) 100%);
+  background: -ms-linear-gradient(top, rgba(51,51,51,1) 0%, rgba(19,19,19,1) 100%);
+  background: linear-gradient(to bottom, rgba(51,51,51,1) 0%, rgba(19,19,19,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#333333', endColorstr='#131313', GradientType=0 );
 }
 
 .project-single-info h2 {
