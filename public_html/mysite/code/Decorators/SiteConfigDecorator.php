@@ -29,7 +29,7 @@ class SiteConfigDecorator extends DataExtension {
     $fields->removeByName('Access');
 
     // if(!Permission::check("ADMIN")) {
-      $fields->removeByName('Theme');
+      // $fields->removeByName('Them  e');
     // }
 
     $fields->addFieldToTab("Root.Main",

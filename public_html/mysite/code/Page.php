@@ -30,6 +30,7 @@ class Page extends SiteTree {
 	  ->setThumbnailWidth(200)
 	  ->setAutoProcessQueue(true) // do not upload files until user clicks an upload button
 	  ->setMaxFilesize(10) // 10 megabytes. Defaults to PHP's upload_max_filesize ini setting
+    ->setView('grid')
 	  ->imagesOnly();
 		// ->setPermissions(array(
 		//    'delete' => false,
@@ -77,6 +78,10 @@ class Page extends SiteTree {
 			return parent::Link();
 		}
 	}
+
+  public function PreviewImages() {
+    return $this->Images()->sort('RAND()');
+  }
 
 	public function Loop($n) {
 		$a = new ArrayList();

@@ -3,7 +3,7 @@
 
     <div class="row no-gutter">
 
-        <% loop Images.Limit(4) %>
+        <% loop PreviewImages.Limit(8) %>
             <!-- Item -->
             <div class="col-xs-6 col-md-3 gallery-item">
                 <a href="$Top.URLSegment">

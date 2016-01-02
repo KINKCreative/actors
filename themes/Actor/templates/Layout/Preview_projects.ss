@@ -12,7 +12,7 @@
 
         <div id="portfolio2-grid-container" class="cbp-l-grid-masonry">
 
-            <% loop Projects %>
+            <% loop Projects.Limit(3) %>
                 <!-- Item -->
                 <div class="cbp-item graphic identity">
                     <a class="cbp-caption" data-title="Tiger" href="$Link">

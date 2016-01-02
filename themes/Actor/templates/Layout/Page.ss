@@ -1,3 +1,4 @@
+<% if Slider.Count==0 %>
 <!-- Project Single Header -->
 <div class="jumbotron page-header m-0" <% if Image %>style="background-image: url($Image.CroppedImage(1422,800).URL);"<% end_if %>>
     <div class="container">
@@ -10,12 +11,13 @@
     </div> <!-- /.container -->
 </div>
 <!-- End Project Single Header -->
+<% end_if %>
 
 <% if Content %>
-<section id="{$URLSegment}-section" class="">
+<section id="content-section" class="section-padding">
 
     <div class="container">
-        <div class="about-content text-center">
+        <div class="content">
             <!-- Description -->
             <p>$Content</p>
             $Form

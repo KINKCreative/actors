@@ -171,7 +171,7 @@
                                     data-endelementdelay="0.1"
                                     data-endspeed="500"
                                     data-endeasing="Power4.easeIn">
-                                        <a class="btn btn-primary" href="$Link" role="button" <% if OpenInNew %>target="_blank"<% end_if %> >$ButtonLabel</a>
+                                        <a class="btn btn-primary" href="$Link.RAW" role="button" <% if OpenInNew %>target="_blank"<% end_if %> >$ButtonLabel</a>
                                 </div>
                                 <% end_if %>
                             </li>

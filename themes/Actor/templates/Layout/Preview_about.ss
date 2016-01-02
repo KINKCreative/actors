@@ -43,7 +43,7 @@
                   <p>$Content.Summary(120)</p>
                   <!-- Button -->
                   <div data-sr="enter bottom over 1.3s and move 15px">
-                      <a class="btn btn-black" href="$Link" role="button">Read more</a>
+                      <a class="btn btn-black" href="$URLSegment" role="button">Read more</a>
                       <%-- <a class="btn" href="#x" role="button">Read more</a> --%>
                   </div>
 
