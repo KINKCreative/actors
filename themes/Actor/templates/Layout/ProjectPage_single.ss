@@ -2,12 +2,13 @@
 
 <!-- Project Single Header -->
 <div class="jumbotron project-single-header" style="background-image: url($Image.CroppedImage(1422,800).URL);">
+    <div class="jumbotron-overlay"></div>
     <div class="container">
         <div class="row">
-            <!-- Title and Description -->
             <div class="elements-title text-center p-l-120 p-r-120 p-n-xs">
-                <h1>$Title</h1>
-                <p>$Genre</p>
+                <h2 class="uppercase strong m-b-10">$Title</h2>
+                <p class="m-b-20">$Genre / $Format</p>
+                <a href="$IMDBLink" class="btn btn-white-t">IMDB Page</a>
             </div>
         </div> <!-- /.row -->
     </div> <!-- /.container -->
@@ -16,8 +17,7 @@
 
 <div class="container project-single-container">
 
-    <!-- Project Single Information -->
-    <div class="project-single-info">
+    <%-- <div class="project-single-info">
         <div class="col-sm-6">
             <h2>What we did</h2>
             <p>Proin facilisis varius nunc. Curabitur eros risus, ultrices et dui ut, luctus accumsan nibh. Fusce convallis sapien placerat tellus suscipit vehicula. Ea mei nostrum imperdiet deterruisset, mei ludus efficiendi ei. Sea summo mazim ex, ea errem eleifend definitionem vim. Detracto erroribus et mea.</p>
@@ -29,18 +29,17 @@
         </div>
     </div>
 
-    <div class="clearfix"></div>
+    <div class="clearfix"></div> --%>
 
-    <!-- Project Single Video -->
+    <% if Clips %>
     <div class="project-single-video">
         <div class="col-sm-12">
-            <!-- Video -->
             <div class="embed-responsive embed-responsive-16by9">
-                <!-- Video Link -->
-                <iframe class="embed-responsive-item" src="//player.vimeo.com/video/52149990"></iframe>
+                $Clips.First.Video.EmbedHTML.RAW
             </div>
         </div>
     </div>
+    <% end_if %>
 
     <div class="clearfix"></div>
 
@@ -52,102 +51,83 @@
             <h2>Project Details</h2>
             <ul class="list-group project-list-group">
                 <li class="list-group-item project-list-group-item">
-                    <span class="badge">Envato Market</span>
-                    Client:
+                    <span class="badge">$Genre</span>
+                    Genre:
                 </li>
                 <li class="list-group-item project-list-group-item">
-                    <span class="badge"><a href="#">www.envato.com</a></span>
-                    Website:
+                    <span class="badge">$Format</span>
+                    Format:
                 </li>
                 <li class="list-group-item project-list-group-item">
-                    <span class="badge">25 December, 2014</span>
+                    <span class="badge">$Director</span>
                     Date:
                 </li>
                 <li class="list-group-item project-list-group-item">
-                    <span class="badge">
-                        <a href="#">Graphic Design</a>, <a href="#">UI/UX</a>
-                    </span>
-                    Category:
+                    <span class="badge">$ProductionCompany</span>
+                    Production:
                 </li>
             </ul>
         </div>
 
         <!-- Right Column -->
         <div class="col-sm-8">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In maximus ligula semper metus pellentesque mattis. Maecenas volutpat, diam enim sagittis quam, id porta quam. Sed id dolor consectetur fermentum nibh volutpat, accumsan purus. Etiam sit amet fringilla lacus. Pellentesque suscipit ante at ullamcorper pulvinar neque porttitor. Integer lectus. Praesent sed nisi eleifend, fermentum orci amet, iaculis libero. Donec vel ultricies purus. Nam dictum sem, eu aliquam. In maximus ligula semper metus pellentesque mattis. Maecenas volutpat, diam enim sagittis quam, id porta quam. Sed id dolor consectetur fermentum nibh volutpat, accumsan purus. Etiam sit amet fr.</p>
-            <p>Etiam sit amet fringilla lacus. Pellentesque suscipit ante at ullamcorper pulvinar neque porttitor. Integer lectus. Praesent sed nisi eleifend, fermentum orci amet, iaculis libero. Donec vel ultricies purus. Nam dictum sem, eu aliquam. In maximus ligula semper metus pellentesque mattis. Maecenas volutpat, diam enim sagittis quam, id porta quam. Sed id dolor consectetur fermentum nibh volutpat, accumsan purus. Etiam sit amet frorem ipsum dolor sit amet, consectetur adipiscing elit. In maximus ligula semper metus pellentesque mattis. Maecenas volutpat, diam enim sagittis quam, id porta quam. Sed id dolor consectetur fermentum nibh volutpat, accumsan purus. </p>
+            <p>$Description</p>
         </div>
     </div>
 </div>
 
+<p class="p-l-25 p-r-25 p-b-15 m-t-0 text-center">
+    <a href="$URLPrefix" class="btn btn-black">Back to Projects</a>
+</p>
+
 <% if Images %>
-<div class="container-fluid col-no-p">
-
-    <div id="portfolio2-grid-container" class="cbp-l-grid-masonry">
-
-        <% loop Images %>
-            <!-- Item -->
-            <div class="cbp-item graphic identity">
-                <%-- <a class="cbp-caption" data-title="Tiger" href="$Link"> --%>
-                    <%-- <div class="cbp-caption-defaultWrap"> --%>
-                        <img src="$CroppedImage(800,450).URL" alt="Specify an alternate text for an image">
-                    <%-- </div> --%>
-                    <%-- <div class="cbp-caption-activeWrap">
-                        <div class="cbp-l-caption-alignCenter">
-                            <div class="cbp-l-caption-body">
-                                <div class="cbp-l-caption-title">$Title</div>
-                                <div class="cbp-l-caption-desc">$Genre</div>
-                            </div>
-                        </div>
-                    </div> --%>
-                </a>
-            </div>
-        <% end_loop %>
-
+<section class="section-bg-color project-single-details">
+    <div class="container p-30">
+        <div class="row">
+            <h2>Project Gallery</h2>
+        </div>
     </div>
 
-</div> <!-- /.container-fluid -->
+    <% include Gallery %>
+</section>
 <% end_if %>
 
-
-
-
- <!-- About Section -->
-<%-- <section id="header-section" class="section-padding">
-    <!-- Head Title -->
-    <div class="rk-head-title">
-        <h1>$Title</h1>
-        <!-- Title Devider -->
-        <div class="rk-separator"></div>
+<% if sBTSImages %>
+<section class="section-bg-color project-single-details">
+    <div class="container p-30">
+        <div class="row">
+            <h2>Behind the Scenes</h2>
+        </div>
     </div>
-</section> --%>
-<!-- /.section -->
 
-<%-- <div class="container-fluid col-no-p">
+    <div class="container-fluid col-no-p m-t--5">
 
-    <div id="portfolio2-grid-container" class="cbp-l-grid-masonry">
+        <div class="cbp-l-grid-masonry">
 
-        <% loop Projects %>
-            <!-- Item -->
+            <% loop BTSImages %>
             <div class="cbp-item graphic identity">
-                <a class="cbp-caption" data-title="Tiger" href="$Link">
+                <a class="cbp-lightbox cpb-caption" data-title="Image {$ID}" href="$Fit(1000,1000).URL">
                     <div class="cbp-caption-defaultWrap">
-                        <img src="$Images.First.CroppedImage(800,450).URL" alt="Specify an alternate text for an image">
+                        <img src="$FocusFill(600,600).URL" alt="Specify an alternate text for an image">
                     </div>
                     <div class="cbp-caption-activeWrap">
                         <div class="cbp-l-caption-alignCenter">
                             <div class="cbp-l-caption-body">
-                                <div class="cbp-l-caption-title">$Title</div>
-                                <div class="cbp-l-caption-desc">$Genre</div>
+                                <div class="cbp-l-caption-title">Four Things I Wanted To Do With You</div>
+                                <div class="cbp-l-caption-desc">Comedy</div>
                             </div>
                         </div>
                     </div>
                 </a>
             </div>
-        <% end_loop %>
+            <% end_loop %>
 
-    </div>
+        </div>
 
-</div> --%>
+    </div> <!-- /.container-fluid -->
+
+</section>
+<% end_if %>
+
 <% end_with %>
 

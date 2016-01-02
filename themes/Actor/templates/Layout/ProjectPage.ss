@@ -44,7 +44,7 @@
                         <img src="$Image.CroppedImage(1422,800).URL"  alt="Slider Image $Pos"  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
 
                         <!-- LAYER NR. 1 -->
-                        <div class="tp-caption slider-text-big lfb ltt tp-resizeme p-50"
+                        <div class="tp-caption slider-text-big lfb ltt tp-resizeme p-80 unwrap"
                             data-x="center" data-hoffset="0"
                             data-y="center" data-voffset="-50"
                             data-speed="600"
@@ -71,12 +71,12 @@
                             data-elementdelay="0.01"
                             data-endelementdelay="0.1"
                             data-endspeed="500"
-                            data-endeasing="Power4.easeIn">$Genre
+                            data-endeasing="Power4.easeIn">$Genre / $Format
                         </div>
                         <% end_if %>
 
 
-                        <% if IMDBLink %>
+
                         <div class="tp-caption slider-text lfb ltt tp-resizeme"
                             data-x="center" data-hoffset="0"
                             data-y="center" data-voffset="150"
@@ -89,9 +89,10 @@
                             data-endelementdelay="0.1"
                             data-endspeed="500"
                             data-endeasing="Power4.easeIn">
-                                <a class="btn btn-primary" href="$IMDBLink" role="button" target="_blank">IMDB</a>
+                                <a class="btn btn-white-t" href="$Link" role="button">View project</a>
+                                <% if IMDBLink %><a class="btn btn-white-t" href="$IMDBLink" role="button" target="_blank">IMDB</a><% end_if %>
                         </div>
-                        <% end_if %>
+
                     </li>
 
                 </ul>
@@ -101,7 +102,7 @@
 
 </section>
 <!-- End Header -->
-
+<% end_if %>
 
  <!-- About Section -->
 <section id="{$URLSegment}-section" class="section-padding">
@@ -114,11 +115,12 @@
 </section>
 <!-- /.section -->
 
+<% if Projects.Count > 1 %>
 <div class="container-fluid col-no-p">
 
     <div id="portfolio2-grid-container" class="cbp-l-grid-masonry">
 
-        <% loop Projects %>
+        <% loop Projects.Limit(999,1) %>
             <!-- Item -->
             <div class="cbp-item graphic identity">
                 <a class="cbp-caption" data-title="Tiger" href="$Link">
@@ -142,3 +144,9 @@
 </div>
 <% end_if %>
 
+
+<div class="container-fluid text-center p-30">
+    <div data-sr="enter bottom over 1.3s and move 65px">
+        <a class="btn btn-black" href="/" role="button">Return to Home</a>
+    </div>
+</div> <!-- /.container -->

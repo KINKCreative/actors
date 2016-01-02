@@ -63,3 +63,16 @@ $real: $limit / $interval;
     padding: inherit !important;
   }
 }
+
+.uppercase {
+  text-transform: uppercase;
+}
+.strong {
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+.unwrap {
+  white-space: normal;
+  line-height: 1;
+}

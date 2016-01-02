@@ -66,10 +66,3 @@
     </div> <!-- /.container -->
 </section>
 <!-- Subscribe Section --> --%>
-
-
-<!-- Contact Section -->
-<section id="contact-section" class="section-bg-color">
-
-</section>
-<!-- End Contact Section -->

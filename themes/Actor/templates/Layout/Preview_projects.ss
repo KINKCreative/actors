@@ -40,7 +40,7 @@
         <div class="about-content text-center">
             <!-- Button -->
             <div data-sr="enter bottom over 1.3s and move 65px">
-                <a class="btn btn-black m-t-15" href="$Link" role="button">See all $Title</a>
+                <a class="btn btn-black m-t-15" href="$URLSegment" role="button">See all $Title</a>
             </div>
         </div>
     </div>
